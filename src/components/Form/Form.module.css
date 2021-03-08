@@ -1,0 +1,36 @@
+.formGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.textGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textGroup input{
+    border: 1px solid #cccccc; 
+    border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    -khtml-border-radius: 3px; 
+    background: #c7c4c4 !important; 
+    outline: none; 
+    height: 10%; 
+    width: 80%; 
+    color: #1a1818; 
+    font-size: 1.875rem; 
+    font-family: Tahoma;
+    margin: 0.625rem; 
+}
+
+.textGroup span {
+    color: #a80606;
+    font-size: 1.875rem; 
+    font-family: Tahoma;
+    margin: 0.625rem;
+}

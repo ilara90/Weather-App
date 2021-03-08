@@ -1,0 +1,18 @@
+.city{
+    display: flex;
+}
+
+.cityList {
+    display: flex;
+    border: 2px solid white;
+    list-style-type: none;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 0.6rem;
+    padding: 0.3rem;
+}
+
+.listContainer{
+    list-style-type: none;
+}
