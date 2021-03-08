@@ -17,7 +17,7 @@ const Info = () => {
     }
 
     return (
-        <div className="info">
+        <div className={styles.info}>
             <h1>{timeOfDay}!</h1>
             
             <p>Узнайте погоду в Вашем городе</p>

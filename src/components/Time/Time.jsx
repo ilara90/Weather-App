@@ -115,7 +115,7 @@ class Time extends React.Component {
 
     render() {
         return (
-            <div className="App-clock">
+            <div className={styles.appClock}>
                 <p>
                     Текущее дата: {this.addZero(this.state.data)}<span> </span>
                                     {this.showmonth(this.state.month)}<span> </span>
