@@ -117,10 +117,11 @@ class Time extends React.Component {
         return (
             <div className={styles.appClock}>
                 <p>
-                    Текущее дата: {this.addZero(this.state.data)}<span> </span>
-                                    {this.showmonth(this.state.month)}<span> </span>
-                                    {this.showday(this.state.day)}<span> </span>
-                                    {this.state.year}
+                    Текущая дата: 
+                    {this.addZero(this.state.data)}<span> </span>
+                    {this.showmonth(this.state.month)}<span> </span>
+                    {this.showday(this.state.day)}<span> </span>
+                    {this.state.year}
                 </p>
                 <p>
                     Текущее время: {this.addZero(this.state.hour)}<span>:</span>{this.addZero(this.state.min)}<span>:</span>{this.addZero(this.state.sec)}

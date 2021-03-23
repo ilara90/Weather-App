@@ -16,3 +16,15 @@
 .listContainer{
     list-style-type: none;
 }
+
+.maxTemp {
+    color:red;
+    font-weight: bold;
+    font-family: Helvetica;
+}
+
+.minTemp {
+    color: rgb(20, 143, 224);
+    font-weight: bold;
+    font-family: Helvetica;
+}

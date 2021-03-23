@@ -68,7 +68,7 @@ const App = () => {
       try {
         const apiUrl = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${event ? event.target.elements.city.value : city}&appid=${apiKey}&units=metric`);
         const dataFromUrl = await apiUrl.json();
-        if (dataFromUrl.cod === '404') {
+        if (dataFromUrl.cod === '404' || dataFromUrl.cod === '400') {
           throw new Error(dataFromUrl.message);
         } else {
           setError(null);
@@ -80,11 +80,18 @@ const App = () => {
     }
   }
 
+  // Находим max and min температуру
+  let arrTemp = [];
+  arrayOfCity.map(item => arrTemp.push(item.temp));
+  let maxTemp = Math.max.apply(null, arrTemp);
+  let minTemp = Math.min.apply(null, arrTemp);
+  console.log(maxTemp, minTemp);
+
   const onRemoveCard = (id) => {
     const deleteCity = arrayOfCity.filter(item => item.id !== id);
     setArrayOfCity(deleteCity)
   }
-
+ 
   return (
     <div className="container">
       <Time />
@@ -94,10 +101,13 @@ const App = () => {
         error={error}
       />
       <div className='container-city'>
-        {arrayOfCity.length > 0 && arrayOfCity.map(item => <WeatherCard 
+        {arrayOfCity.length > 0 && arrayOfCity.map(item => <WeatherCard
+          key={item.id}
           {...item} 
           onRemoveCard={id => onRemoveCard(id)} 
           onUpdateData={city => gettingWeather({city})} 
+          maxTemp = {maxTemp}
+          minTemp = {minTemp}
         />)}
       </div> 
     </div>
