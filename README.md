@@ -12,4 +12,4 @@ You will also see any lint errors in the console.
 
 # Demo
 
-https://trusting-swirles-123a78.netlify.app/
+https://nifty-meitner-8217a8.netlify.app
